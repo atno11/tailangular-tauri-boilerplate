@@ -1,0 +1,55 @@
+<main class="w-screen h-screen flex justify-center items-center box-content">
+  <mat-card class="m-2">
+    <div id="card-container" class="flex h-full flex-row flex-nowrap p-2">
+      <ul id="img-list-container" class="flex flex-col gap-4">
+        <li class="w-40 h-40 relative">
+          <a (click)="openLink('https://angular.io/docs')" title="Angular - Documentation" class="cursor-pointer">
+          <img class="absolute inset-0 object-contain w-full h-full" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png" alt="angular-logo">
+          </a>
+        </li>
+        <li class="w-40 h-40 relative">
+            <a (click)="openLink('https://tauri.app/v1/guides/')" title="Tauri - Documentation" class="cursor-pointer">
+              <img class="absolute inset-0 object-contain w-full h-full" src="https://cdn.worldvectorlogo.com/logos/tauri-1.svg" alt="tauri-logo">
+            </a>
+        </li>
+        <li class="w-40 h-40 relative">
+            <a (click)="openLink('https://tailwindcss.com/docs/theme')" title="Tailwind - Documentation" class="cursor-pointer">
+              <img class="absolute inset-0 object-contain w-full h-full" src="https://static-00.iconduck.com/assets.00/tailwind-css-icon-1024x615-fdeis5r1.png" alt="tailwind-logo"/>
+            </a>
+        </li>
+      </ul>
+      <mat-card-content class="!box-border !h-full">
+        <mat-card-title class="!text-2xl font-bold text-center">Welcome to the Angular Tauri Boilerplate</mat-card-title>
+        <!-- <br> -->
+        <!-- <mat-divider/> -->
+        <span id="content-container" class="relative flex flex-col h-full gap-2 items-center justify-start font-medium box-border">
+          <p class="text-xl">Here is a sample of Angular Material and Routing</p>
+          <p>Read the docs about each framework clicking on the respective icon</p>
+          <span id="buttons-card-container" class="relative max-h-[80%] h-full flex flex-1 flex-row gap-2 p-4">
+            <button mat-flat-button (click)="changeTheme()" color="primary" class="relative min-h-full h-full shadow-md">Themes</button>
+
+            <a routerLink="/sample-page" mat-flat-button color="warn" class="relative min-h-full h-full shadow-md">Routing</a>
+
+          </span>
+        </span>
+      </mat-card-content>
+      <mat-divider vertical/>
+      <mat-card-content>
+        <mat-card-title>Socials</mat-card-title>
+        <ul class="flex flex-col items-center justify-start max-w-12 max-h-12 gap-2 ml-3">
+          <li>
+            <a (click)="openLink('https://github.com/atno11')" title="GitHub" class="cursor-pointer">
+              <img src="https://cdn-icons-png.flaticon.com/128/733/733609.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a (click)="openLink('https://twitter.com/atno_')" title="Twitter" class="cursor-pointer">
+              <img src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="">
+            </a>
+          </li>
+        </ul>
+      </mat-card-content>
+    </div>
+
+  </mat-card>
+</main>

@@ -1,0 +1,20 @@
+@use '@angular/material' as mat;
+@use "./palettes.scss" as palettes;
+
+[app-theme="dark"]{
+  $dark-purple-primary: mat.define-palette(palettes.$purple, 500);
+  $dark-purple-accent: mat.define-palette(palettes.$green, 400);
+  $dark-purple-warn: mat.define-palette(palettes.$pink, 400);
+
+  $dark-theme: mat.define-dark-theme((
+    color: (
+      primary: $dark-purple-primary,
+      accent: $dark-purple-accent,
+      warn: $dark-purple-warn
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  ));
+  @include mat.all-component-themes($dark-theme);
+  @include mat.button-color($dark-theme);
+}

@@ -1,0 +1,26 @@
+<header id="title-header-container" class="bg-[#424242] p-[0.15rem] shadow-sm">
+  <ul class="flex flex-row-reverse text-[#303030]">
+    <!-- @for (component of title_components.reverse(); track $index) {
+      <li [id]="component.li.id" [class]="component.li.class">
+        <button [id]="component.button.id" [class]="component.button.class">
+          <mat-icon [id]="component.mat_icon.id" [fontIcon]="component.mat_icon.fontIcon" [class]="component.mat_icon.class"/>
+        </button>
+      </li>
+    } -->
+    <li id="li-close-container" class="flex items-end hover:text-white hover:bg-red-500 transition-all duration-500 ease-in-out">
+      <button id="button-close" class="flex items-end w-12 justify-center" (click)="handleWindow('Close')">
+        <mat-icon id="icon-close" [fontIcon]="icon_close" class="!scale-[0.65]"/>
+      </button>
+    </li>
+    <li id="li-maximize-container" class="flex items-end hover:text-white hover:bg-[#6a6a6a] transition-all duration-500 ease-in-out">
+      <button id="button-maximize" class="flex items-end w-12 justify-center" (click)="handleWindow('Maximize')">
+        <mat-icon id="icon-maximize" [fontIcon]="icon_maximize" class="!scale-[0.65] rotate-180"/>
+      </button>
+    </li>
+    <li id="li-minimize-container" class="flex items-end hover:text-white hover:bg-[#6a6a6a] transition-all duration-500 ease-in-out">
+      <button id="button-minimize" class="flex items-end w-12 justify-center" (click)="handleWindow('Minimize')">
+        <mat-icon id="icon-minimize" [fontIcon]="icon_minimize" class="!scale-[0.65]"/>
+      </button>
+    </li>
+  </ul>
+</header>
