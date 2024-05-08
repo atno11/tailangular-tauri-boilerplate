@@ -19,12 +19,20 @@ export class TitleBarComponent {
   icon_maximize: "filter_none" | "square" = "filter_none";
   icon_minimize = "minimize"
 
-  constructor(private tauriService: TauriService) {}
+  constructor(private tauriService: TauriService) {
+    // document.getElementById("title-header-container")?.addEventListener("click", () => {
+      // console.log("title-header-container clicked")
+    // })
+  }
 
   handleWindow(action: "Close" | "Maximize" | "Minimize" ) {
     this.tauriService.invoke("handle_window", { action }).then(handle_window_response => {
       if(handle_window_response == "none") return;
       this.icon_maximize = handle_window_response;
     })
+  }
+
+  log(message: string) {
+    console.log(message)
   }
 }
